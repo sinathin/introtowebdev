@@ -4,59 +4,104 @@
 <head>
   <meta charset="utf-8">
   <title>Sydney's Personal Blog</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- order doesnt matter for HTML attributes-->
-  <table cellspacing=10>
-    <tr>
-      <td><img src="Sydney.jpg" alt="Sydney Anderson Profile Pic" width=240 height=180></td>
-      <td>
-        <h1>Sydney Anderson</h1>
-        <p><em> A junior Computer Science student at <strong><a href="https://www.latech.edu/">Louisiana Tech University</a></strong>.</em></p>
-        <P>I am a student who loves to try and learn new things related to computers.
-          I am also a triplet and I am a D1 NCAA athlete on the <a href="https://latechsports.com/roster.aspx?rp_id=3557">track and field</a> team at Tech 🏃.</P>
-        <a href="contact.html">Contact Me</a>
-      </td>
-    </tr>
-  </table>
+  <div class=Main>
+    <div class=buttons>
+      <a href="contact.html" class="myButton contact">Contact Me</a>
+      <a href="hobbies.html" class="myButton hobbies">Hobbies</a>
+    </div>
+
+   <div class=Me>
+      <img class=picture src="pics/Sydney3.0.png" alt="Sydney Anderson Profile Pic">
+      <h1>Hi, I'm Sydney</h1>
+      <p>A CompSci student trying to learn Web Development.</p>
+    </div>
+    <div class= transition>
+      <img class=moon src="pics/moon.png" alt="Moon">
+    </div>
+  </div>
+
+<div class= AboutMe>
+  <img class=picture src="pics/Sydney2.0.png" alt= "Sydney Bitmoji pic">
+  <h1>About Me</h1>
+  <h3>My name is Sydney Anderson and I'm from Aurora, IL.</h3>
+  <p> I'm a student who loves to try and learn new things involving computers.
+  </p>
+  <p>Also, I'm a triplet! (So, there are 2 more of me)</p>
+</div>
+<hr>
+
+  <div class=Education>
+  <h1>Education</h1>
+  <ul>
+    <li><h3>Louisiana Tech University</h3></li>
+    <h4>Ruston, LA</h4>
+    <p> -Bachelors in Computer Science, Junior</p>
+    <p> -Concentrations in Cyber Security and Big Cloud Data and Computing.</p>
+    <li><h3>Yorkville High School</h3></li>
+    <h4>Yorkville, IL</h4>
+    <p> -High School Diploma May '17</p>
+  </ul>
+    <div class= spaceman>
+  <img class=picture src="pics/spaceman.png" alt="Astronaut Pic">
+    </div>
+  </div>
+  <hr >
+
+  <div class=experience>
+    <h1>Work Experience</h1>
+    <ul>
+      <li>
+        <h3>5 Dynamics</h3>
+        <h3 class= date>June 2019 - Present</h3>
+      </li>
+      <h4>Austin, TX</h4>
+      <p> -Agile Developement
+      </p>
+      <p> -Quality Assurance of Software 
+      </p>
+      <li>
+        <h3>Louisiana Tech Office of Financial Aid</h3>
+        <h3 class= date>2017-2021</h3>
+      </li>
+      <h4>Ruston, LA</h4>
+      <p> -In-depth knowledge about Federal and private loans, grants, and scholarships
+      </p>
+       <p>  -Aided those inquiring about assistance covering costs incurred in the pursuit of post-secondary education.
+</p>
+    </ul>
+    <div class=spaceman2>
+      <img class=picture src="pics/hold flag.png" alt="Astronaut Pic">
+    </div>
+  </div>
+  <hr>
+
+ <div class = "skills">
+  <h1>Skills</h1>
+    <ul>
+    <li><h3>Java ⭐⭐⭐⭐⭐</h3></li>
+    <p> -My personal favorite object-oriented programming language</p>
+    <li><h3>Python ⭐⭐⭐⭐</h3></li>
+    <p> -Not my favorite, but I am very comfortable with its syntax and functionality<p>
+    <li><h3>Web Development ⭐</h3></li>
+    <p> -Under Construction<p>
+    </ul>
+    <div class=spaceman3>
+      <img class=picture src="pics/frontspaceman.jpg" alt="Front Astronaut Pic">
+    </div>
+    </div>
 
   <hr>
-  <h3>Education</h3>
-  <ul>
-    <li>Louisiana Tech University</li>
-    <li>Yorkville High School</li>
-  </ul>
-  <hr />
-  <h3>Work Experience</h3>
-  <table>
-    <thead>
-      <tr>
-        <td>Year</td>
-        <td>Company Name</td>
-      </tr>
-    </thead>
-    <tr>
-      <td>2019</td>
-      <td>5 Dynamics</td>
-    </tr>
-    <tr>
-      <td>2017<br />-2021</td>
-      <td>Office of Financial Aid </td>
-    </tr>
-  </table>
-  <hr />
-  <h3>Skills</h3>
-  <table>
-    <tr>
-      <td>Communication ★★★★</td></tr>
-      <tr><td>Python ★★★</td></tr>
-    <tr>  <td>Java ★★★</td> </tr>
-    <tr>  <td>Web Development ★</td> </tr>
-  </table>
-  <hr>
-  <a href="hobbies.html">My Hobbies</a>
-  <br>
+  
 
 
 
