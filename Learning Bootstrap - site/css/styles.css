@@ -1,3 +1,12 @@
+@media only screen and (min-width: 442px) {
+  body {
+    background-color: greenyellow;
+  }
+  header {
+    height: 320px !important;
+  }
+}
+
 img {
   display: block;
 }
@@ -17,8 +26,8 @@ header {
   background-image: url("pool.gif");
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: 60%;
-  height: 370px;
+  background-position: 50%;
+  height: 230px;
   text-align: center;
   background-color: #f0eef3;
 }
@@ -68,5 +77,13 @@ header {
 
 .howitworks .picture-3 {
   opacity: 0.8;
+}
+
+h1 {
+  font-family: 'Fredoka One', cursive;
+}
+
+h5, h6 {
+  font-family: 'Cantarell', sans-serif;
 }
 /*# sourceMappingURL=styles.css.map */

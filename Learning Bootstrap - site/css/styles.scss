@@ -10,6 +10,16 @@
     max-width: 100%;
      height: auto;
 }
+
+@media only screen and (min-width: 442px){
+   body{
+    background-color: greenyellow; ///to see change 
+   }
+   header{
+       height: 320px !important; //use !important to replace code, Since media quieres doesnt "Change code", it adds the code the the previous code  
+    }
+}
+//NEXT WILL BE 608px change height of header, etc
 img{
     display:block;
 }
@@ -26,8 +36,8 @@ header{
     background-image: url("pool.gif");
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: 60%;
-    height: 370px;
+    background-position: 50%;
+    height: 230px;
     text-align: center;
     // USE THIS FOR MEDIA QUIERY: 
     background-color:#f0eef3;
@@ -55,8 +65,13 @@ header{
     }
     }
 
-    
-
 
 }
+
+h1{
+    font-family: 'Fredoka One', cursive;
+}
+h5,h6{
+   font-family: 'Cantarell', sans-serif;
+    }
     
