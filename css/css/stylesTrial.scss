@@ -1,0 +1,88 @@
+@import "styles2.scss";
+
+@include mainLayout();
+@include navbuttons();
+
+body{
+  background-color:darkgray;
+  background-image: url("fullmoon.png");
+}
+
+.buttons{
+  text-align: right;
+}
+
+
+.picture{
+  width:160px; 
+  height:160px;
+  border-radius: 50%;
+  margin-top: 70px;
+  border: 5px solid black;
+  padding:15px;
+}
+.header{
+  text-align: center;
+  background-color: darkgray;
+  
+  background-image: url("fullmoon.png");
+  height:400px;
+  width:100%;
+  position: relative;
+  
+
+  .picture{
+    margin:0px;
+   
+    border:none;
+  }
+
+  .front{
+    position: absolute;
+    left:10%;
+  }
+  .back{
+    position: absolute;
+    right:10%;
+    bottom:13%;
+  }
+  .fallen{
+      position: relative;
+      top:150px;
+      left:230px;
+      width:320px;
+      height:200px;
+  }
+  h1{
+    font-family: 'Courgette', cursive;
+    position: relative;
+    top:30%;
+    font-size: 43px;
+    color: #4b1068;
+  }
+  h3{
+      position: relative;
+    top:33%;
+    font-family: 'Courgette', cursive;
+  }
+
+
+    .submit{
+        font-family: 'Poppins', sans-serif;
+        background-color:#a481c6;
+        margin:20px;
+        padding:10px 25px;
+        border:1px solid black;
+        font-size: 20px;
+        border-radius: 10%;
+        position: relative;
+        top:150px;
+
+       
+    }
+}
+ input[type="submit"]:hover{
+        background-color:#8b5eb6;
+        }
+
+
