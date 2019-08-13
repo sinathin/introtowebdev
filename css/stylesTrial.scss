@@ -1,4 +1,4 @@
-@import "styles2.scss";
+@import "styles.scss";
 
 @include mainLayout();
 @include navbuttons();
@@ -12,14 +12,17 @@ body{
   text-align: right;
 }
 
-
+//Defaut .picture in styles.css file sets the backgroudn to white
+// NEED to override or change for the contact me page
+//AND the sizing of the pciutre is because of the media queires 
 .picture{
-  width:160px; 
+  width:240px; 
   height:160px;
   border-radius: 50%;
   margin-top: 70px;
   border: 5px solid black;
   padding:15px;
+
 }
 .header{
   text-align: center;
