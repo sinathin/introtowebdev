@@ -6,7 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -30,93 +31,154 @@
     <link rel="icon" href="pictures/planet.jpg">
 
     <!-- CSS-->
-    <link rel="stylesheet" href="css/styles.css" >
+    <link rel="stylesheet" href="css/styles.css">
 
     <!-- FONTS-->
     <link href="https://fonts.googleapis.com/css?family=Cantarell:400i|Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
 
+    <!--FONT AWESOME: FOR ICONS-->
+    <script src="https://kit.fontawesome.com/6b767c7d51.js"></script>
 
+    <!-- To BEAUTIFY: SHIFT + ALT + F-->
 </head>
+
 <body>
+
     <!-- Nav Bar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-warning">
-        <span class="navbar-brand mb-0 h1">PlanIt</span> <!-- Using this as a heading rather than a link-->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=#navContent aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+    <nav class="navbar  fixed-top navbar-expand-lg navbar-light ">
+
+        <!-- <span class="navbar-brand mb-0 h1">PlanIt</span>  Using this as a heading rather than a link-->
+        <nav class="navbar navbar-light ">
+            <a class="navbar-brand mb-0 h1" href="index.html">
+                <img src="pictures/planet2.png" width="75" height="55" class="d-inline-block align-top" alt="">
+                PlanIt
+            </a>
+        </nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=#navContent
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div id="navContent" class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto"> <!-- ml-auto adds an automatic left margin to push tems to the right-->
-            <li class="nav-item">
-                <a class="nav-link" href="" >Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li class="nav-item">
-            <li>
-                <a class="nav-link" href="#">Contact</a>
-            </li>
-        </ul>
+            <!-- ml-auto adds an automatic left margin to push tems to the right-->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li class="nav-item">
+                <li>
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
         </div>
     </nav>
-    <!-- End of Nav Bar-->
 
-    <div class="wrapper">
+    <!--Heading-->
+    <div class="headblock">
         <header>
-        <h1>PlanIt</h1>
-        <h5>Your social life, organized</h5>
-        </header>
+            <div class="container">
+                <h1>When life just won't allow you to find time to hang out</h1>
+                <h5>Your social life, organized</h5>
+                <aside>
+                    <button type="button" class="btn btn-outline-primary btn-lg"><i class="fab fa-apple"></i>
+                        Download</button>
+                    <button type="button" class="btn btn-outline-dark btn-lg"><i class="fab fa-google-play"></i>
+                        Download</button>
+                </aside>
+            </div>
+            <img src="pictures/remvedoubleback.png" alt="Phonelogo">
 
+        </header>
+    </div>
+
+    <!--Bootstrap challenge1-->
+    <div class="container icons1">
+        <div class="wrapper-1">
+            <i class="far fa-calendar-check fa-3x" style="color:rgb(18, 18, 197)"></i>
+            <h4> Easy to Use </h4>
+            <p>Just set up your account! Connect with others! And plan it!</p>
+        </div>
+
+        <div class="wrapper-2">
+            <i class="fas fa-times-circle fa-3x" style="color:#fcd307"></i>
+            <h4>Stress Free</h4>
+            <p>Schedule and Connect with friends and family effortlessly!</p>
+        </div>
+
+        <div class="wrapper-3">
+            <i class="fas fa-thumbs-up fa-3x" style="color:rgb(18, 18, 197)"></i>
+            <h4> Guaranteed to Work </h4>
+            <p>All you have to do is set it up and get started!</p>
+        </div>
+
+    </div>
+    <!--
+    <div class="container">
         <section class=howitworks>
             <div>
-            <h1>How It Works.</h1>
-            <h6>PlanIt makes hanging out with friends easier than ever</h6>
+                <h1>How It Works.</h1>
+                <h6>PlanIt makes hanging out with friends easier than ever</h6>
             </div>
-                <div class="calendar"> 
-                            <img src="pictures/calendar.jpg" alt="Calendar" class="picture-1">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, ut. Deleniti nulla et rerum asperiores quos numquam nisi voluptatibus nesciunt!
-                            <!--Combines the organization of a calendar-->
-                </div>
-                
-                <div class="schedule">
-                    <img src="pictures/schedule.jpg" alt="Scheduling" class="picture-2">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit fugiat magni modi, quae quo pariatur!
-                    <!--by essentially allowing friends of loved ones to see when you're free and scehdule time to hang out with you, 
-                                        , because we all know that sommetimes life gets busy-->
-                </div>
+            <div class="calendar">
+                <img src="pictures/calendar.jpg" alt="Calendar" class="picture-1">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, ut. Deleniti nulla et rerum
+                asperiores quos numquam nisi voluptatibus nesciunt!
+            -->
+    <!--Combines the organization of a calendar-->
+    <!-- </div>
 
-                <div class="friends">
-                <img src="pictures/friends.jpg" alt="Friends" class="picture-3 "/>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, numquam!
-                    <!-- To ultimately makes planning and hanging out with friends better-->
-                        <!-- I mean sure, yea everyone loves spur of the moment adventures... but most of the time
+    <div class="schedule">
+        <img src="pictures/schedule.jpg" alt="Scheduling" class="picture-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit fugiat magni modi, quae quo pariatur!
+        -->
+    <!--by essentially allowing friends of loved ones to see when you're free and scehdule time to hang out with you, 
+                                        , because we all know that sommetimes life gets busy-->
+    <!--</div>
+
+    <div class="friends">
+        <img src="pictures/friends.jpg" alt="Friends" class="picture-3 " />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, numquam!-->
+    <!-- To ultimately makes planning and hanging out with friends better-->
+    <!-- I mean sure, yea everyone loves spur of the moment adventures... but most of the time
                         life will just not allow us time to find a time to meet up and hang out with the girsl or chill
                     with the bros. PlanIt essential takes the "When are you free" question away from people and allows
                 them the <em>see</em> when their friend is free. And no worries, you onyl have to share what you want, with who you want-->
-                </div>
-                <!-- <div class="phone">
+    <!--</div>-->
+    <!-- <div class="phone">
                         <img src="pictures/phone.jpg" alt="Phone" width= 376 height=436.5>
                         All at your fingertips!
                     </div>
                     -->
-        
-        </section>
 
-
-        
-    </div>
-
-
-
+    <!--
+    </section>
     
+
+
+
+    </div> -->
+
+
+
+
 
 
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
