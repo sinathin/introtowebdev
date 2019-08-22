@@ -1,77 +1,195 @@
 // need to design for mobile layout first
 //then using @media we can use media queires to change the screen when it grows larger
 
-@mixin centerPhotos(){
+@mixin centeritems() {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-@mixin reactivePhotos(){
+
+@mixin reactivePhotos() {
     max-width: 100%;
-     height: auto;
+    height: auto;
 }
 
-@media only screen and (min-width: 442px){
-   body{
-    background-color: greenyellow; ///to see change 
-   }
-   header{
-       height: 320px !important; //use !important to replace code, Since media quieres doesnt "Change code", it adds the code the the previous code  
+
+body {
+    background-color: #fff;
+    font-family: 'Fredoka One',
+        cursive;
+
+    p {
+        font-family: 'Livvic',
+            sans-serif;
     }
 }
-//NEXT WILL BE 608px change height of header, etc
-img{
-    display:block;
+
+.navbar {
+    background-color: #fcd307;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+
+
+    .navbar-brand {
+        font-size: 2rem;
+    }
+
+    .navbar {
+        padding-left: 0px;
+    }
+
+    .nav-item {
+        font-weight: lighter;
+        margin-right: 2.5rem;
+    }
 }
 
-.wrapper{
-    margin-top: 3.5em;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
+.headblock {
+    background-color: #fcd307;
 }
 
-header{
-    grid-column: 1/4;
-    background-image: url("pool.gif");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 50%;
-    height: 230px;
+header {
+    padding: 9rem 0 0 0;
+    background-color: #fcd307;
     text-align: center;
-    // USE THIS FOR MEDIA QUIERY: 
-    background-color:#f0eef3;
-}
 
-.howitworks{
-    grid-column: 1/4;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr; //FOR LARGE DISPLAY USE 2 colums, the bigger colum is for the phone
-    text-align: center;
-    grid-row-gap: 2rem;
-    
-    @for $i from 1 through 3{
-        .picture-#{$i}{ /*this assumes the name of class is .picture-#. # being a num in our loop, so that we can 
-            apply the same effect to multiple objects with different names*/
-            @include centerPhotos();   
-            @include reactivePhotos();
-        }  
-        
-        @if ($i == 3 ){ //checks to see if i equals 3 and if it is, then we change the opacity of the picture
-        .picture-#{$i}{
-            opacity: 0.8;
+    div {
+        aside {
+            @include centeritems();
         }
     }
+
+    img {
+        max-width: 70%;
+        max-height: 70%;
     }
 
-
-}
-
-h1{
-    font-family: 'Fredoka One', cursive;
-}
-h5,h6{
-   font-family: 'Cantarell', sans-serif;
+    h1 {
+        font-size: 2rem;
+        font-family: 'Fredoka One',
+            cursive;
     }
-    
+
+    h5,
+    button {
+        margin: 1rem 0;
+        font-size: 1rem;
+        font-family: 'Cantarell',
+            sans-serif;
+    }
+
+    button {
+        display: inline;
+        margin-left: .5rem;
+    }
+}
+
+.icons1 {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 1rem 2rem 5rem;
+
+    p {
+        font-size: 90%;
+        color: grey;
+    }
+
+    @for $i from 1 through 3 {
+        .wrapper-#{$i} {
+            margin: 2rem 0;
+        }
+    }
+
+    .fas:hover, .far:hover {
+        opacity: 0.7;
+    }
+}
+
+// img{
+//     display:block;
+// }
+
+// .wrapper{
+//     margin-top: 3.5em;
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+// }
+
+// .howitworks {
+//     grid-column: 1/4;
+//     text-align: center;
+//     display: grid;
+//     grid-template-columns: 1fr; //FOR LARGE DISPLAY USE 2 colums, the bigger colum is for the phone
+//     text-align: center;
+//     grid-row-gap: 2rem;
+
+//     @for $i from 1 through 3 {
+//         .picture-#{$i} {
+//             /*this assumes the name of class is .picture-#. # being a num in our loop, so that we can 
+//             apply the same effect to multiple objects with different names*/
+//             @include centeritems();
+//             @include reactivePhotos();
+//         }
+
+//         @if ($i==3) {
+
+//             //checks to see if i equals 3 and if it is, then we change the opacity of the picture
+//             .picture-#{$i} {
+//                 opacity: 0.8;
+//             }
+//         }
+//     }
+
+// }
+
+@media only screen and (min-width: 800px) {
+    .navbar {
+        .navbar {
+            font-size: 2rem;
+            padding-left: 16px;
+        }
+    }
+
+    header {
+        display: grid;
+        grid-auto-columns: .25fr 1fr 1fr .25fr;
+        grid-auto-rows: auto;
+        grid-template: ". text img .";
+        grid-column-gap: 5rem;
+
+        div {
+            grid-area: text;
+        }
+
+        img {
+            grid-area: img;
+            max-width: 100%;
+            max-height: 100%;
+            //transform: rotate(5deg);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h5,
+        button {
+            font-size: 1.5rem;
+        }
+    }
+
+    .icons1 {
+        display: grid;
+        grid-auto-columns: .15fr 1fr 1fr 1fr .25fr;
+        grid-auto-rows: auto;
+        grid-template: ". icon1 icon2 icon3 .";
+        grid-column-gap: 3rem;
+        padding: 5rem 2rem;
+
+        @for $i from 1 through 3 {
+            .wrapper-#{$i} {
+                grid-area: icon#{$i};
+            }
+        }
+    }
+}

@@ -1,89 +1,141 @@
-@media only screen and (min-width: 442px) {
-  body {
-    background-color: greenyellow;
-  }
-  header {
-    height: 320px !important;
-  }
+body {
+  background-color: #fff;
+  font-family: 'Fredoka One', cursive;
 }
 
-img {
-  display: block;
+body p {
+  font-family: 'Livvic', sans-serif;
 }
 
-.wrapper {
-  margin-top: 3.5em;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+.navbar {
+  background-color: #fcd307;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.navbar .navbar-brand {
+  font-size: 2rem;
+}
+
+.navbar .navbar {
+  padding-left: 0px;
+}
+
+.navbar .nav-item {
+  font-weight: lighter;
+  margin-right: 2.5rem;
+}
+
+.headblock {
+  background-color: #fcd307;
 }
 
 header {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-column: 1/4;
-  background-image: url("pool.gif");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: 50%;
-  height: 230px;
+  padding: 9rem 0 0 0;
+  background-color: #fcd307;
   text-align: center;
-  background-color: #f0eef3;
 }
 
-.howitworks {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-column: 1/4;
-  text-align: center;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  text-align: center;
-  grid-row-gap: 2rem;
-}
-
-.howitworks .picture-1 {
-  /*this assumes the name of class is .picture-#. # being a num in our loop, so that we can 
-            apply the same effect to multiple objects with different names*/
+header div aside {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 100%;
-  height: auto;
 }
 
-.howitworks .picture-2 {
-  /*this assumes the name of class is .picture-#. # being a num in our loop, so that we can 
-            apply the same effect to multiple objects with different names*/
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  height: auto;
+header img {
+  max-width: 70%;
+  max-height: 70%;
 }
 
-.howitworks .picture-3 {
-  /*this assumes the name of class is .picture-#. # being a num in our loop, so that we can 
-            apply the same effect to multiple objects with different names*/
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  height: auto;
+header h1 {
+  font-size: 2rem;
+  font-family: 'Fredoka One', cursive;
 }
 
-.howitworks .picture-3 {
-  opacity: 0.8;
+header h5,
+header button {
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-family: 'Cantarell', sans-serif;
 }
 
-h1 {
-  font-family: 'Fredoka One', cursive;
+header button {
+  display: inline;
+  margin-left: .5rem;
 }
 
-h5, h6 {
-  font-family: 'Cantarell', sans-serif;
+.icons1 {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 1rem 2rem 5rem;
+}
+
+.icons1 p {
+  font-size: 90%;
+  color: grey;
+}
+
+.icons1 .wrapper-1 {
+  margin: 2rem 0;
+}
+
+.icons1 .wrapper-2 {
+  margin: 2rem 0;
+}
+
+.icons1 .wrapper-3 {
+  margin: 2rem 0;
+}
+
+.icons1 .fas:hover, .icons1 .far:hover {
+  opacity: 0.7;
+}
+
+@media only screen and (min-width: 800px) {
+  .navbar .navbar {
+    font-size: 2rem;
+    padding-left: 16px;
+  }
+  header {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-columns: .25fr 1fr 1fr .25fr;
+    grid-auto-rows: auto;
+    grid-template: ". text img .";
+    grid-column-gap: 5rem;
+  }
+  header div {
+    grid-area: text;
+  }
+  header img {
+    grid-area: img;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header h5,
+  header button {
+    font-size: 1.5rem;
+  }
+  .icons1 {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-columns: .15fr 1fr 1fr 1fr .25fr;
+    grid-auto-rows: auto;
+    grid-template: ". icon1 icon2 icon3 .";
+    grid-column-gap: 3rem;
+    padding: 5rem 2rem;
+  }
+  .icons1 .wrapper-1 {
+    grid-area: icon1;
+  }
+  .icons1 .wrapper-2 {
+    grid-area: icon2;
+  }
+  .icons1 .wrapper-3 {
+    grid-area: icon3;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
