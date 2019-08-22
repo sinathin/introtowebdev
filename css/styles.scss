@@ -1,294 +1,195 @@
+// need to design for mobile layout first
+//then using @media we can use media queires to change the screen when it grows larger
+
 @mixin centeritems() {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-@mixin phoneGrid($rowSize:2fr){ //gives a default valeu of 2fr if no param are given
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr $rowSize;
-}
-@mixin mainLayout(){
-    *{
-        margin: 0px;
-    }
-    h1{
-        font-family: 'Courgette', cursive;
-        color:#642485;
-        font-size: x-large;
-    }
-
-    p, li, ul, h3, h4{
-        font-family: 'Poppins', sans-serif;
-        font-size: small;
-    }
-    hr{
-        border:8px dotted gray;
-        margin: 0 auto;
-        width:6%;
-        border-style: dotted none none;
-        text-align:center;
-    }
-}
-
-@mixin navbuttons{
-        .myButton {
-        
-        background-color:#a481c6;
-        -moz-border-radius:6px;
-        -webkit-border-radius:6px;
-        border-radius:6px;
-        border:1px solid #a481c6;
-        display:inline-block;
-        cursor:pointer;
-        color:#ffffff;
-        font-family:Arial;
-        font-size:15px;
-        font-weight:bold;
-        padding:6px 18px;
-        text-decoration:none;
-        text-shadow:0px 1px 0px #c2a9da;
-        margin: 10px;
-    
-    }
-    .myButton:hover {
-        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a20dbd), color-stop(1, #c05dd4));
-        background:-moz-linear-gradient(top, #a20dbd 5%, #c05dd4 100%);
-        background:-webkit-linear-gradient(top, #a20dbd 5%, #c05dd4 100%);
-        background:-o-linear-gradient(top, #a20dbd 5%, #c05dd4 100%);
-        background:-ms-linear-gradient(top, #a20dbd 5%, #c05dd4 100%);
-        background:linear-gradient(to bottom, #a20dbd 5%, #c05dd4 100%);
-        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a20dbd', endColorstr='#c05dd4',GradientType=0);
-        background-color:#a20dbd;
-    }
-    .myButton:active {
-        position:relative;
-        top:1px;
-    }
-    
-}
-
-
-@include mainLayout();
-@include navbuttons();
-
-body{
-  background-color: whitesmoke;
-}
-
-.picture{
-  width: 100px;
-  height:100px;
-  border-radius: 50%;
-  border: 5px solid black;
-  padding:15px;
-  background-color: white;
- 
-}
-.Main{
-  background-image: url("purple3.0.jpg");
-  background-color:#a481c6;
-  background-repeat:no-repeat;
-  background-size:cover;
-  position: relative;
-  height: 450px;
-}
-.buttons{
-  text-align: center;
-}
-
-
-.Me{
-    text-align: center;
-    align-content: center;
-
-    h1{
-    font-size:xx-large;
-    margin-bottom: 10px;
-    position: relative;
-    top:30px;
-    color: #371449;
-    }
-
-    p{
-    font-family: 'Courgette', cursive;
-    font-size:medium;
-    position: relative;
-    top:30px;
-    }
-}
-    .moon{
-    position: absolute;
-    bottom:0;
+@mixin reactivePhotos() {
     max-width: 100%;
     height: auto;
-    max-height: 200px;
+}
+
+
+body {
+    background-color: #fff;
+    font-family: 'Fredoka One',
+        cursive;
+
+    p {
+        font-family: 'Livvic',
+            sans-serif;
+    }
+}
+
+.navbar {
+    background-color: #fcd307;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+
+
+    .navbar-brand {
+        font-size: 2rem;
     }
 
+    .navbar {
+        padding-left: 0px;
+    }
 
-.AboutMe{
+    .nav-item {
+        font-weight: lighter;
+        margin-right: 2.5rem;
+    }
+}
+
+.headblock {
+    background-color: #fcd307;
+}
+
+header {
+    padding: 9rem 0 0 0;
+    background-color: #fcd307;
     text-align: center;
-    background-color:whitesmoke;
-    margin: 60px 30px 0px; 
-     @include phoneGrid(1.5);
-    grid-row-gap: 15px;
-   
-    article {
-        margin-bottom: 50px;
-    }
-    p{
-    font-weight: 500;
-    margin:5px;
-    }
-    h3{
-    margin:5px;
-    }
-}
 
-.Education{
-    background-color: whitesmoke;
-   
-    margin: 60px 30px 0px;
-    @include phoneGrid();
-    grid-row-gap: 30px;
-
-    .spaceman{
-        @include centeritems();
-    }
-}
-
-.experience{
-    background-color: whitesmoke;
-    margin: 60px 30px 0px;
-   @include phoneGrid(2.5);
-   grid-row-gap: 30px;
-    
-    
-    article {
-        margin-bottom: 50px;
-    }
-
-    
-    .spaceman2{
-        @include centeritems();
-    }
-}
-
-.skills{
-    margin: 60px 30px 0px;
-    @include phoneGrid();
-    grid-row-gap: 30px;
-
-    .spaceman3{
-        @include centeritems();
-    }
-}
-
-@media only screen and (min-width: 700px){
-    .Me {
-        h1 {
-            font-size: 35px !important;
-        }
-
-        p {
-            font-size: 15px !important;
-        }
-       
-    }
-
-    .Main {
-        height: 500px !important;
-    }
-
-    h1 {
-        font-size: x-large !important;
-    }
-
-    p,li,ul,h3,h4 {
-        font-size: medium !important;
-    }
-
-    .picture {
-        width: 130px !important;
-        height: 130px !important;
-    }
-
-}
-
-@media only screen and (min-width: 1200px) {
-    .Me {
-        h1 {
-            font-size: 43px !important;
-        }
-
-        p {
-            font-size: 18px !important;
-        }
-    }
-
-
-    .Main {
-        height: 600px !important;
-    }
-
-    h1 {
-        font-size: xx-large !important;
-    }
-
-    p,li,ul,h3,h4 {
-        font-size: large !important;
-    }
-
-    .picture {
-        width: 160px !important;
-        height: 160px !important;
-    }
-
-    .buttons {
-        text-align: right !important;
-    }
-
-    .experience {
-        grid-template-columns: 2fr 2fr 2fr !important;
-        grid-template-areas:
-        "pic text text"  !important;
-        aside{
-            grid-area: pic !important;
-        }
-        article{
-            grid-area: text !important;
-        }
-    }
-    .Education {
-         grid-template-columns: 2fr 1fr 2fr !important;
-         grid-template-areas: "text text pic" !important;
-         margin: 135px 50px 135px 100px !important;
-         aside {
-             grid-area: pic !important;
-         }
-
-         article {
-             grid-area: text !important;
-         }
-    }
-
-    .skills{
-        grid-template-columns: 2fr 1fr 2fr !important;
-        grid-template-areas: "text text pic" !important;
-        margin: 135px 50px 135px 100px !important;
-
+    div {
         aside {
-            grid-area: pic !important;
-        }
-
-        article {
-            grid-area: text !important;
+            @include centeritems();
         }
     }
 
-    .endofPage{
-        margin:100px;
+    img {
+        max-width: 70%;
+        max-height: 70%;
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-family: 'Fredoka One',
+            cursive;
+    }
+
+    h5,
+    button {
+        margin: 1rem 0;
+        font-size: 1rem;
+        font-family: 'Cantarell',
+            sans-serif;
+    }
+
+    button {
+        display: inline;
+        margin-left: .5rem;
     }
 }
 
+.icons1 {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 1rem 2rem 5rem;
+
+    p {
+        font-size: 90%;
+        color: grey;
+    }
+
+    @for $i from 1 through 3 {
+        .wrapper-#{$i} {
+            margin: 2rem 0;
+        }
+    }
+
+    .fas:hover, .far:hover {
+        opacity: 0.7;
+    }
+}
+
+// img{
+//     display:block;
+// }
+
+// .wrapper{
+//     margin-top: 3.5em;
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+// }
+
+// .howitworks {
+//     grid-column: 1/4;
+//     text-align: center;
+//     display: grid;
+//     grid-template-columns: 1fr; //FOR LARGE DISPLAY USE 2 colums, the bigger colum is for the phone
+//     text-align: center;
+//     grid-row-gap: 2rem;
+
+//     @for $i from 1 through 3 {
+//         .picture-#{$i} {
+//             /*this assumes the name of class is .picture-#. # being a num in our loop, so that we can 
+//             apply the same effect to multiple objects with different names*/
+//             @include centeritems();
+//             @include reactivePhotos();
+//         }
+
+//         @if ($i==3) {
+
+//             //checks to see if i equals 3 and if it is, then we change the opacity of the picture
+//             .picture-#{$i} {
+//                 opacity: 0.8;
+//             }
+//         }
+//     }
+
+// }
+
+@media only screen and (min-width: 800px) {
+    .navbar {
+        .navbar {
+            font-size: 2rem;
+            padding-left: 16px;
+        }
+    }
+
+    header {
+        display: grid;
+        grid-auto-columns: .25fr 1fr 1fr .25fr;
+        grid-auto-rows: auto;
+        grid-template: ". text img .";
+        grid-column-gap: 5rem;
+
+        div {
+            grid-area: text;
+        }
+
+        img {
+            grid-area: img;
+            max-width: 100%;
+            max-height: 100%;
+            //transform: rotate(5deg);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h5,
+        button {
+            font-size: 1.5rem;
+        }
+    }
+
+    .icons1 {
+        display: grid;
+        grid-auto-columns: .15fr 1fr 1fr 1fr .25fr;
+        grid-auto-rows: auto;
+        grid-template: ". icon1 icon2 icon3 .";
+        grid-column-gap: 3rem;
+        padding: 5rem 2rem;
+
+        @for $i from 1 through 3 {
+            .wrapper-#{$i} {
+                grid-area: icon#{$i};
+            }
+        }
+    }
+}
