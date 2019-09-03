@@ -4,291 +4,439 @@
     margin-right: auto;
 }
 
-@mixin phoneGrid($rowSize:2fr){ //gives a default valeu of 2fr if no param are given
+@mixin phoneGrid($rowSize:2fr) {
+    //gives a default valeu of 2fr if no param are given
     display: grid;
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr $rowSize;
 }
-@mixin mainLayout(){
-    *{
-        margin: 0px;
+
+@mixin laptopGrid() {
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-areas: "text text pic";
+    margin: 135px 50px 0px 100px;
+
+    aside {
+        grid-area: pic;
     }
-    h1{
+
+    article {
+        grid-area: text;
+    }
+}
+
+* {
+    margin: 0px;
+}
+
+//----------------------General body layout for mobile to begin--------------------------
+//add "body" before to override boostrap defaults OR by being more specific
+body {
+    background-color: whitesmoke !important;
+
+    h1 {
         font-family: 'Courgette', cursive;
-        color:#642485;
-        font-size: x-large;
+        color: #642485;
+        font-size: 30px;
+
     }
 
-    p, li, ul, h3, h4{
+    h3 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    h4 {
+        font-size: 16.5px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    p,
+    li,
+    ul,
+    h3,
+    h4 {
         font-family: 'Poppins', sans-serif;
-        font-size: small;
-    }
-    hr{
-        border:8px dotted gray;
-        margin: 0 auto;
-        width:6%;
-        border-style: dotted none none;
-        text-align:center;
     }
 }
 
-@mixin navbuttons{
-        .myButton {
-        
-        background-color:#a481c6;
-        -moz-border-radius:6px;
-        -webkit-border-radius:6px;
-        border-radius:6px;
-        border:1px solid #a481c6;
-        display:inline-block;
-        cursor:pointer;
-        color:#ffffff;
-        font-family:Arial;
-        font-size:15px;
-        font-weight:bold;
-        padding:6px 18px;
-        text-decoration:none;
-        text-shadow:0px 1px 0px #c2a9da;
-        margin: 10px;
+//----------------------Picture layout--------------------------
+.picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid black;
+    padding: 15px;
+    background-color: white;
+
+}
+
+//----------------------Fancy Line breaks--------------------------
+hr {
+    border: 8px dotted black !important;
+    margin: 0 auto;
+    width: 6%;
+    border-style: dotted none none !important;
+    text-align: center;
+}
+
+
+//----------------------Body Navbar--------------------------
+body .navbody {
+    font-family: 'Poppins',
+        sans-serif;
+    font-weight: bold;
+    background-color: #231F20;
+    display: none; //hidden for right now
     
-    }
-    .myButton:hover {
-        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a20dbd), color-stop(1, #c05dd4));
-        background:-moz-linear-gradient(top, #a20dbd 5%, #c05dd4 100%);
-        background:-webkit-linear-gradient(top, #a20dbd 5%, #c05dd4 100%);
-        background:-o-linear-gradient(top, #a20dbd 5%, #c05dd4 100%);
-        background:-ms-linear-gradient(top, #a20dbd 5%, #c05dd4 100%);
-        background:linear-gradient(to bottom, #a20dbd 5%, #c05dd4 100%);
-        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a20dbd', endColorstr='#c05dd4',GradientType=0);
-        background-color:#a20dbd;
-    }
-    .myButton:active {
-        position:relative;
-        top:1px;
-    }
-    
+
 }
 
-
-@include mainLayout();
-@include navbuttons();
-
-body{
-  background-color: whitesmoke;
+//-------------------------Header-----------------------------
+.navhead {
+    margin-bottom: 1.5rem;
 }
 
-.picture{
-  width: 100px;
-  height:100px;
-  border-radius: 50%;
-  border: 5px solid black;
-  padding:15px;
-  background-color: white;
- 
-}
-.Main{
-  background-image: url("purple3.0.jpg");
-  background-color:#a481c6;
-  background-repeat:no-repeat;
-  background-size:cover;
-  position: relative;
-  height: 450px;
-}
-.buttons{
-  text-align: center;
+header {
+    //padding-top: 3rem;
+    background-image: url("purple3.0.jpg");
+    background-color: #a481c6;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 530px;
 }
 
-
-.Me{
+.Me {
     text-align: center;
     align-content: center;
 
-    h1{
-    font-size:xx-large;
-    margin-bottom: 10px;
-    position: relative;
-    top:30px;
-    color: #371449;
+    h1 {
+        margin-bottom: 10px;
+        position: relative;
+        top: 30px;
+        color: black;
     }
 
-    p{
-    font-family: 'Courgette', cursive;
-    font-size:medium;
-    position: relative;
-    top:30px;
+    p {
+        font-family: 'Courgette', cursive;
+        position: relative;
+        top: 30px;
+        color: black;
+        //text-decoration: underline overline white wavy;
     }
 }
-    .moon{
+
+.moon {
     position: absolute;
-    bottom:0;
+    // left: 10px;
+    bottom: 0;
     max-width: 100%;
     height: auto;
     max-height: 200px;
-    }
+}
 
-
-.AboutMe{
+//----------------------About Me--------------------------
+.AboutMe {
     text-align: center;
-    background-color:whitesmoke;
-    margin: 60px 30px 0px; 
-     @include phoneGrid(1.5);
+    background-color: whitesmoke;
+    margin: 60px 30px 0px;
+    @include phoneGrid(1.5);
     grid-row-gap: 15px;
-   
-    article {
-        margin-bottom: 50px;
-    }
-    p{
-    font-weight: 500;
-    margin:5px;
-    }
-    h3{
-    margin:5px;
-    }
-}
 
-.Education{
-    background-color: whitesmoke;
-   
-    margin: 60px 30px 0px;
-    @include phoneGrid();
-    grid-row-gap: 30px;
-
-    .spaceman{
-        @include centeritems();
-    }
-}
-
-.experience{
-    background-color: whitesmoke;
-    margin: 60px 30px 0px;
-   @include phoneGrid(2.5);
-   grid-row-gap: 30px;
-    
-    
     article {
         margin-bottom: 50px;
     }
 
-    
-    .spaceman2{
-        @include centeritems();
+    p {
+        font-weight: 500;
+        margin: 5px;
+    }
+
+    h3 {
+        margin: 5px;
     }
 }
 
-.skills{
+//----------------------Education--------------------------
+.Education {
+    background-color: whitesmoke;
     margin: 60px 30px 0px;
     @include phoneGrid();
     grid-row-gap: 30px;
 
-    .spaceman3{
+    .spaceman {
         @include centeritems();
     }
 }
 
-@media only screen and (min-width: 700px){
-    .Me {
-        h1 {
-            font-size: 35px !important;
-        }
+//----------------------Experience--------------------------
+.experience {
+    background-color: whitesmoke;
+    margin: 60px 30px 0px;
+    @include phoneGrid(2.5);
+    grid-row-gap: 30px;
 
-        p {
-            font-size: 15px !important;
-        }
-       
+    article {
+        margin-bottom: 50px;
     }
 
-    .Main {
-        height: 500px !important;
+    .spaceman2 {
+        @include centeritems();
     }
-
-    h1 {
-        font-size: x-large !important;
-    }
-
-    p,li,ul,h3,h4 {
-        font-size: medium !important;
-    }
-
-    .picture {
-        width: 130px !important;
-        height: 130px !important;
-    }
-
 }
 
-@media only screen and (min-width: 1200px) {
-    .Me {
-        h1 {
-            font-size: 43px !important;
-        }
+//------------------------Skills--------------------------
+.skills {
+    background-color: whitesmoke;
+    margin: 60px 30px 0px;
+    @include phoneGrid();
+    grid-row-gap: 30px;
 
-        p {
-            font-size: 18px !important;
-        }
+    .spaceman3 {
+        @include centeritems();
     }
+}
 
-
-    .Main {
-        height: 600px !important;
-    }
+//------------------------Contact Me--------------------------
+.chat {
+    text-align: center;
+    margin-top: 3rem;
 
     h1 {
-        font-size: xx-large !important;
+        font-size: 40px;
+        margin-bottom: 0;
     }
 
-    p,li,ul,h3,h4 {
-        font-size: large !important;
+    p:nth-child(2) {
+        font-family: 'Courgette',
+            cursive;
+        font-size: 16px;
     }
 
+    p:nth-child(3) {
+        margin-top: 2rem;
+        max-width: 570px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input[type="submit"] {
+        margin: 3rem 1rem;
+        font-family: 'Poppins',
+            sans-serif;
+        background-color: #a481c6;
+        //margin: 20px;
+        padding: 10px 25px;
+        border: 1px solid black;
+        font-size: 20px;
+
+        &:hover {
+            background-color: #8b5eb6;
+        }
+    }
+}
+
+body footer {
+    padding: 3rem;
+    background-color: black;
+    color: white;
+
+    p,
+    a {
+        font-size: 12px;
+
+    }
+
+    a:hover {
+        color: purple;
+    }
+
+    .links {
+        margin-bottom: 2rem;
+        justify-content: center;
+
+        #git {
+            margin-right: 3rem;
+        }
+
+
+    }
+
+    a {
+        color: white;
+    }
+}
+
+//------------------------ PROJECTS _------------------------------
+
+.tempProj {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template: ". pic text .";
+    grid-column-gap: 3rem;
+    margin-top:6rem;
+    margin-bottom:3rem;
+    img{
+        grid-area: pic;
+    }
+
+    .projText {
+        grid-area: text;
+        color: white;
+    }
+}
+
+//----------------------Media Query Tablet+--------------------------
+@media only screen and (min-width: 550px) {
     .picture {
-        width: 160px !important;
-        height: 160px !important;
+        width: 130px;
+        height: 130px;
     }
 
-    .buttons {
-        text-align: right !important;
-    }
+    header {
+        height: 580px;
 
-    .experience {
-        grid-template-columns: 2fr 2fr 2fr !important;
-        grid-template-areas:
-        "pic text text"  !important;
-        aside{
-            grid-area: pic !important;
-        }
-        article{
-            grid-area: text !important;
-        }
-    }
-    .Education {
-         grid-template-columns: 2fr 1fr 2fr !important;
-         grid-template-areas: "text text pic" !important;
-         margin: 135px 50px 135px 100px !important;
-         aside {
-             grid-area: pic !important;
-         }
+        .navhead {
+            margin-left: 5rem;
+            margin-right: 5rem;
 
-         article {
-             grid-area: text !important;
-         }
-    }
-
-    .skills{
-        grid-template-columns: 2fr 1fr 2fr !important;
-        grid-template-areas: "text text pic" !important;
-        margin: 135px 50px 135px 100px !important;
-
-        aside {
-            grid-area: pic !important;
+            .nav-item {
+                margin-left: 2rem;
+            }
         }
 
         article {
-            grid-area: text !important;
+            p {
+                font-size: 17px;
+            }
         }
     }
 
-    .endofPage{
-        margin:100px;
+    body {
+        h1 {
+            font-size: 32px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .experience article ul li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template: "job date";
+
+        h3 {
+            grid-area: job;
+        }
+
+        h4 {
+            grid-area: date;
+            text-align: right;
+        }
+    }
+
+}
+ .navhead .nav-item {
+     margin-left: 2rem;
+ }
+ .nav-link{
+     margin-left: 2rem;
+ }
+
+//----------------------Media Query Laptops+ --------------------------
+@media only screen and (min-width: 1200px) and (max-width:1800px) {
+
+    .picture {
+        width: 160px;
+        height: 160px;
+    }
+
+    header {
+        height: 750px;
+
+        article {
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .moon {
+        left: 10px;
+    }
+
+    body {
+        h1 {
+            font-size: 38px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    body .Education,
+    .skills {
+        @include laptopGrid();
+        padding-left: 3rem;
+        padding-right: 2rem;
+    }
+
+    body .experience {
+        grid-template-columns: 1.5fr 3.5fr;
+        margin: 135px 50px 0px 100px;
+        padding-left: 1rem;
+        padding-right: 4rem;
+    }
+
+    .chat {
+        h1 {
+            font-size: 55px;
+        }
+
+        p:nth-child(2) {
+            font-size: 19px;
+        }
+    }
+
+    footer {
+
+        p,
+        a {
+            font-size: 15px !important;
+
+        }
+
+        .links #git {
+            margin-right: 6rem;
+        }
     }
 }
-
