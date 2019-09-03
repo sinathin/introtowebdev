@@ -5,69 +5,109 @@
   <meta charset="utf-8">
   <title>Sydney's Personal Blog</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
+  <!-- Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap" rel="stylesheet">
+  <!--BootStrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--Animate on Scroll-->
+  <link rel="stylesheet" href="bower_components/aos-master/dist/aos.css" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <!-- JQUERY-->
+   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
 </head>
 
 <body>
+  <nav class=" navbody navbar navbar-expand-lg navbar-dark sticky-top">
+     <div class="container">
+       <a class="navbar-brand" href="index.html">
+         <img src="/pics/logo.png" width="70" height="70" style="transform: rotate(-15deg)" alt="Profile Picture">
+       </a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#buttons"
+         aria-controls="buttons" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+
+       <div class="collapse navbar-collapse" id="buttons">
+         <div class="navbar-nav nav ml-auto">
+           <a class="nav-item nav-link active" style="font-weight: bold" href="index.html">About</a>
+           <a class="nav-item nav-link" style="font-weight: bold" href="projects.html">Projects</a>
+         </div>
+       </div>
+     </div>
+  </nav>
+
   <header class=Main>
+    <nav class=" navhead navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="/pics/logo.png" width="70" height="70" style="transform: rotate(-15deg)" alt="Profile Picture">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#buttons"
+          aria-controls="buttons" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class=buttons>
-      <a href="contact.html" style="display: none"class="myButton contact">Contact Me</a>
-      <a href="hobbies.html" style="display: none"class="myButton hobbies">Hobbies</a>
-    </div>
-
-   <article class=Me>
+        <div class="collapse navbar-collapse" id="buttons">
+          <div class="navbar-nav nav ml-auto">
+            <a class="nav-item nav-link active" style="font-weight: bold"  href="index.html">About</a>
+            <a class="nav-item nav-link" style="font-weight: bold" href="projects.html">Projects</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <article class=Me>
       <img class=picture src="pics/Sydney3.0.png" alt="Sydney Anderson Profile Pic">
       <h1>Hi, I'm Sydney</h1>
       <p>A CompSci student trying to learn Web Development.</p>
-   </article>
-
-   
-      <img class=moon src="pics/moon.png" alt="Moon">
-    
-
+    </article>
+    <img class=moon src="pics/moon.png" alt="Moon">
   </header>
 
-<main class= AboutMe>
-  <aside>
-  <img class=picture src="pics/Sydney2.0.png" alt= "Sydney Bitmoji pic">
-  </aside>
-  <article>
-  <h1>About Me</h1>
-  <h3>My name is Sydney Anderson and I'm from Aurora, IL.</h3>
-  <p> I'm a student who loves to try and learn new things involving computers.
-  </p>
-  <p>Also, I'm a triplet! (So, there are 2 more of me)</p>
-  </article>
-</main>
+  <main data-aos="fade-up" class="AboutMe container">
+    <aside>
+      <img class=picture src="pics/Sydney2.0.png" alt="Sydney Bitmoji pic">
+    </aside>
+    <article>
+      <h1>About Me</h1>
+      <h3>My name is Sydney Anderson and I'm from Aurora, IL.</h3>
+      <p> I'm a student who loves to try and learn new things involving computers.
+      </p>
+      <p>Also, I'm a triplet! (So, there are 2 more of me)</p>
+    </article>
+  </main>
 
-<hr>
+  <hr>
 
-  <section class=Education>
-     <aside class=spaceman>
-       <img class=picture src="pics/spaceman.png" alt="Astronaut Pic">
-     </aside>
-   
+  <section data-aos="fade-up" class="Education container">
+    <aside class=spaceman>
+      <img class=picture src="pics/spaceman.png" alt="Astronaut Pic">
+    </aside>
+
     <article class=educationContent>
       <h1>Education</h1>
       <ul>
-        <li><h3>Louisiana Tech University</h3></li>
+        <li>
+          <h3>Louisiana Tech University</h3>
+        </li>
         <h4>Ruston, LA</h4>
-        <p> -Bachelors in Computer Science, Junior</p>
-        <p> -Concentrations in Cyber Security and Big Cloud Data and Computing.</p>
-        <li><h3>Yorkville High School</h3></li>
+        <p>&#9753 Bachelors in Computer Science, Junior</p>
+        <p>&#9753 Concentrations in Cyber Security and Big Cloud Data and Computing.</p>
+        <li>
+          <h3>Yorkville High School</h3>
+        </li>
         <h4>Yorkville, IL</h4>
-        <p> -High School Diploma May '17</p>
+        <p>&#9753 High School Diploma May '17</p>
       </ul>
     </article>
   </section>
+  <hr>
 
-  <hr >
 
-  <section class=experience>
+  <section data-aos="fade-up" class="experience container">
     <aside class=spaceman2>
       <img class=picture src="pics/hold flag.png" alt="Astronaut Pic">
     </aside>
@@ -75,53 +115,101 @@
       <h1>Work Experience</h1>
       <ul>
         <li>
-          <h3>5 Dynamics</h3>
-          <h3 class= date>June 2019 - Present</h3>
+          <h3>5 Dynamics </h3>
+          <h4 class=date>June 2019 - Present</h4>
         </li>
         <h4>Austin, TX</h4>
-        <p> -Agile Developement
+        <p> &#9753 Agile Developement
         </p>
-        <p> -Quality Assurance of Software 
+        <p> &#9753 Quality Assurance of Software
         </p>
         <li>
           <h3>Louisiana Tech Office of Financial Aid</h3>
-          <h3 class= date>2017-2021</h3>
+          <h4 class=date>2017-2021</h4>
         </li>
         <h4>Ruston, LA</h4>
-        <p> -In-depth knowledge about Federal and private loans, grants, and scholarships
+        <p> &#9753 In-depth knowledge about Federal and private loans, grants, and scholarships
         </p>
-        <p>  -Aided those inquiring about assistance covering costs incurred in the pursuit of post-secondary education.</p>
+        <p> &#9753 Aided those inquiring about assistance covering costs incurred in the pursuit of post-secondary
+          education.
+        </p>
       </ul>
     </article>
-    
+
   </section>
 
   <hr>
 
- <section class = "skills">
-   <aside class=spaceman3>
-     <img class=picture src="pics/frontspaceman.jpg" alt="Front Astronaut Pic">
-   </aside>
-   
-   <article>
+  <section data-aos="fade-up" class="skills container">
+    <aside class=spaceman3>
+      <img class=picture src="pics/frontspaceman.jpg" alt="Front Astronaut Pic">
+    </aside>
+
+    <article>
       <h1>Skills</h1>
       <ul>
-      <li><h3>Java ⭐⭐⭐⭐⭐</h3></li>
-      <p> -My personal favorite object-oriented programming language</p>
-      <li><h3>Python ⭐⭐⭐⭐</h3></li>
-      <p> -Not my favorite, but I am very comfortable with its syntax and functionality<p>
-      <li><h3>Web Development ⭐</h3></li>
-      <p> -Under Construction<p>
+        <li>
+          <h3>Java ⭐⭐⭐⭐⭐</h3>
+        </li>
+        <p> -My personal favorite object-oriented programming language</p>
+        <li>
+          <h3>Python ⭐⭐⭐⭐</h3>
+        </li>
+        <p> -Not my favorite, but I am very comfortable with its syntax and functionality<p>
+            <li>
+              <h3>Web Development ⭐⭐</h3>
+            </li>
+            <p> -Under Construction<p>
       </ul>
     </article>
   </section>
 
   <hr>
-  <div class=endofPage></div>
-  
+
+  <section class=" chat container">
+    <h1>Let's Chat!</h1>
+    <p>I love talking to people!</p>
+    <p>Feel free to send me some feedback, advice, or simply say <em>"Hi"</em> !<br>
+      It would be great to hear from you or a team member, so that I can continue to grow as a student.</p>
+    <!-- <h3>Psst, click the button below</h3> -->
+
+    <form method="post" action="mailto:sta019@latech.edu" enctype="text/plain">
+      <input class=submit type="submit" value="MESSAGE ME 📧">
+    </form>
+  </section>
+
+  <footer class=" text-center">
+    <div class="links">
+      <a href="https://github.com/sinathin" target="_blank" rel="noopener noreferrer" id="git"
+        style="text-decoration: none">Github</a>
+      <a href="https://www.instagram.com/sydney_anderson99/" target="_blank" rel="noopener noreferrer" id="insta"
+        style="text-decoration: none">Instagram</a>
+    </div>
+    <p id="trade" class="text-center">© 2019 <a href="index.html" style="text-decoration: underline">Sydney
+        Anderson</a>. All rights reserved.</p>
+  </footer>
 
 
 
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+   <!--  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"> -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+   </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="bower_components/aos-master/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 250,
+      duration: 1000,
+      //disable: window.innerWidth < 768
+    });
+  </script>
+   <script src="animates.js"></script>
 </body>
 
 </html>
