@@ -29,8 +29,6 @@
     margin: 0px;
 }
 
-//NEED TO MAKE MOON RELATIVE and  PLACE IN ARTICLE HEADER
-//Then we'll have to calculate how often to move it down
 
 //----------------------General body layout for mobile to begin--------------------------
 //add "body" before to override boostrap defaults OR by being more specific
@@ -94,7 +92,7 @@ body .navbody {
     font-weight: bold;
     background-color: #231F20;
     display: none; //hidden for right now
-    
+
 
 }
 
@@ -110,37 +108,30 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 530px;
+    height: 500px;
 }
 
 .Me {
     text-align: center;
     align-content: center;
+    margin-top: 2.5rem;
 
     h1 {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         position: relative;
-        top: 30px;
+       // top: 20px;
         color: black;
     }
 
     p {
         font-family: 'Courgette', cursive;
         position: relative;
-        top: 30px;
+        //top: 20px;
         color: black;
-        //text-decoration: underline overline white wavy;
+        text-decoration: underline overline white wavy;
     }
 }
 
-.moon {
-    position: absolute;
-    // left: 10px;
-    bottom: 0;
-    max-width: 100%;
-    height: auto;
-    max-height: 200px;
-}
 
 //----------------------About Me--------------------------
 .AboutMe {
@@ -302,7 +293,7 @@ body footer {
     }
 
     header {
-        height: 580px;
+        height: 550px;
 
         .navhead {
             margin-left: 5rem;
@@ -371,7 +362,7 @@ body footer {
     }
 
     header {
-        height: 750px;
+        height: 720px;
 
         article {
             h1 {
@@ -382,10 +373,6 @@ body footer {
                 font-size: 22px;
             }
         }
-    }
-
-    .moon {
-        left: 60px;
     }
 
     body {

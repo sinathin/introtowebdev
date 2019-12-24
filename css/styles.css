@@ -51,8 +51,7 @@ hr {
 }
 
 body .navbody {
-  font-family: 'Poppins',
- sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
   background-color: #231F20;
   display: none;
@@ -68,35 +67,28 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height: 530px;
+  height: 500px;
 }
 
 .Me {
   text-align: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  margin-top: 2.5rem;
 }
 
 .Me h1 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   position: relative;
-  top: 30px;
   color: black;
 }
 
 .Me p {
   font-family: 'Courgette', cursive;
   position: relative;
-  top: 30px;
   color: black;
-}
-
-.moon {
-  position: absolute;
-  bottom: 0;
-  max-width: 100%;
-  height: auto;
-  max-height: 200px;
+  -webkit-text-decoration: underline overline white wavy;
+          text-decoration: underline overline white wavy;
 }
 
 .AboutMe {
@@ -186,8 +178,7 @@ header {
 }
 
 .chat p:nth-child(2) {
-  font-family: 'Courgette',
- cursive;
+  font-family: 'Courgette', cursive;
   font-size: 16px;
 }
 
@@ -200,8 +191,7 @@ header {
 
 .chat input[type="submit"] {
   margin: 3rem 1rem;
-  font-family: 'Poppins',
- sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #a481c6;
   padding: 10px 25px;
   border: 1px solid black;
@@ -270,7 +260,7 @@ body footer a {
     height: 130px;
   }
   header {
-    height: 580px;
+    height: 550px;
   }
   header .navhead {
     margin-left: 5rem;
@@ -326,16 +316,13 @@ body footer a {
     height: 160px;
   }
   header {
-    height: 750px;
+    height: 720px;
   }
   header article h1 {
     font-size: 40px;
   }
   header article p {
     font-size: 22px;
-  }
-  .moon {
-    left: 60px;
   }
   body h1 {
     font-size: 38px;
