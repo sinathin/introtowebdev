@@ -1,0 +1,432 @@
+@mixin centeritems() {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin phoneGrid($rowSize:2fr) {
+    //gives a default valeu of 2fr if no param are given
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr $rowSize;
+}
+
+@mixin laptopGrid() {
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-areas: "text text pic";
+    margin: 135px 50px 0px 100px;
+
+    aside {
+        grid-area: pic;
+    }
+
+    article {
+        grid-area: text;
+    }
+}
+
+* {
+    margin: 0px;
+}
+
+
+//----------------------General body layout for mobile to begin--------------------------
+//add "body" before to override boostrap defaults OR by being more specific
+body {
+    background-color: whitesmoke !important;
+
+    h1 {
+        font-family: 'Courgette', cursive;
+        color: #642485;
+        font-size: 30px;
+
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    h4 {
+        font-size: 16.5px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    p,
+    li,
+    ul,
+    h3,
+    h4 {
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+//----------------------Picture layout--------------------------
+.picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid black;
+    padding: 15px;
+    background-color: white;
+
+}
+
+//----------------------Fancy Line breaks--------------------------
+hr {
+    border: 8px dotted black !important;
+    margin: 0 auto;
+    width: 6%;
+    border-style: dotted none none !important;
+    text-align: center;
+}
+
+
+//----------------------Body Navbar--------------------------
+body .navbody {
+    font-family: 'Poppins',
+        sans-serif;
+    font-weight: bold;
+    background-color: #231F20;
+    display: none; //hidden for right now
+
+
+}
+
+//-------------------------Header-----------------------------
+.navhead {
+    margin-bottom: 1.5rem;
+}
+
+header {
+    //padding-top: 3rem;
+    background-image: url("purple3.0.jpg");
+    background-color: #a481c6;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 500px;
+}
+
+.Me {
+    text-align: center;
+    align-content: center;
+    margin-top: 2.5rem;
+
+    h1 {
+        margin-bottom: 20px;
+        position: relative;
+       // top: 20px;
+        color: black;
+    }
+
+    p {
+        font-family: 'Courgette', cursive;
+        position: relative;
+        //top: 20px;
+        color: black;
+        text-decoration: underline overline white wavy;
+    }
+}
+
+
+//----------------------About Me--------------------------
+.AboutMe {
+    text-align: center;
+    background-color: whitesmoke;
+    margin: 60px 30px 0px;
+    @include phoneGrid(1.5);
+    grid-row-gap: 15px;
+
+    article {
+        margin-bottom: 50px;
+    }
+
+    p {
+        font-weight: 500;
+        margin: 5px;
+    }
+
+    h3 {
+        margin: 5px;
+    }
+}
+
+//----------------------Education--------------------------
+.Education {
+    background-color: whitesmoke;
+    margin: 60px 30px 0px;
+    @include phoneGrid();
+    grid-row-gap: 30px;
+
+    .spaceman {
+        @include centeritems();
+    }
+}
+
+//----------------------Experience--------------------------
+.experience {
+    background-color: whitesmoke;
+    margin: 60px 30px 0px;
+    @include phoneGrid(2.5);
+    grid-row-gap: 30px;
+
+    article {
+        margin-bottom: 50px;
+    }
+
+    .spaceman2 {
+        @include centeritems();
+    }
+}
+
+//------------------------Skills--------------------------
+.skills {
+    background-color: whitesmoke;
+    margin: 60px 30px 0px;
+    @include phoneGrid();
+    grid-row-gap: 30px;
+
+    .spaceman3 {
+        @include centeritems();
+    }
+}
+
+//------------------------Contact Me--------------------------
+.chat {
+    text-align: center;
+    margin-top: 3rem;
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+
+    p:nth-child(2) {
+        font-family: 'Courgette',
+            cursive;
+        font-size: 16px;
+    }
+
+    p:nth-child(3) {
+        margin-top: 2rem;
+        max-width: 570px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input[type="submit"] {
+        margin: 3rem 1rem;
+        font-family: 'Poppins',
+            sans-serif;
+        background-color: #a481c6;
+        //margin: 20px;
+        padding: 10px 25px;
+        border: 1px solid black;
+        font-size: 20px;
+
+        &:hover {
+            background-color: #8b5eb6;
+        }
+    }
+}
+
+body footer {
+    padding: 3rem;
+    background-color: black;
+    color: white;
+
+    p,
+    a {
+        font-size: 12px;
+
+    }
+
+    a:hover {
+        color: purple;
+    }
+
+    .links {
+        margin-bottom: 2rem;
+        justify-content: center;
+
+        #git {
+            margin-right: 3rem;
+        }
+
+
+    }
+
+    a {
+        color: white;
+    }
+}
+
+//------------------------ PROJECTS _------------------------------
+
+.tempProj {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template: ". pic text .";
+    grid-column-gap: 3rem;
+    margin-top:6rem;
+    margin-bottom:3rem;
+    img{
+        grid-area: pic;
+    }
+
+    .projText {
+        grid-area: text;
+        color: white;
+    }
+}
+
+//----------------------Media Query Tablet+--------------------------
+@media only screen and (min-width: 550px) {
+    .picture {
+        width: 130px;
+        height: 130px;
+    }
+
+    header {
+        height: 550px;
+
+        .navhead {
+            margin-left: 5rem;
+            margin-right: 5rem;
+
+            .nav-item {
+                margin-left: 2rem;
+            }
+        }
+
+        article {
+            p {
+                font-size: 17px;
+            }
+        }
+    }
+
+    body {
+        h1 {
+            font-size: 32px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .experience article ul li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template: "job date";
+
+        h3 {
+            grid-area: job;
+        }
+
+        h4 {
+            grid-area: date;
+            text-align: right;
+        }
+    }
+
+}
+ .navhead .nav-item {
+     margin-left: 2rem;
+ }
+ .nav-link{
+     margin-left: 2rem;
+ }
+
+//----------------------Media Query Laptops+ --------------------------
+@media only screen and (min-width: 1200px) and (max-width:1800px) {
+
+    .picture {
+        width: 160px;
+        height: 160px;
+    }
+
+    header {
+        height: 720px;
+
+        article {
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 22px;
+            }
+        }
+    }
+
+    body {
+        h1 {
+            font-size: 38px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    body .Education,
+    .skills {
+        @include laptopGrid();
+        padding-left: 3rem;
+        padding-right: 2rem;
+    }
+
+    body .experience {
+        grid-template-columns: 1.5fr 3.5fr;
+        margin: 135px 50px 0px 100px;
+        padding-left: 1rem;
+        padding-right: 4rem;
+    }
+
+    .chat {
+        h1 {
+            font-size: 55px;
+        }
+
+        p:nth-child(2) {
+            font-size: 19px;
+        }
+    }
+
+    footer {
+
+        p,
+        a {
+            font-size: 15px !important;
+
+        }
+
+        .links #git {
+            margin-right: 6rem;
+        }
+    }
+}
