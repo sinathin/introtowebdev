@@ -7,22 +7,25 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="favicon.ico">
   <!-- Google Fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Piedra&family=Poppins&display=swap" rel="stylesheet">
   <!--BootStrap-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!--Animate on Scroll-->
-  <!-- <link rel="stylesheet" href="bower_components/aos-master/dist/aos.css" /> -->
   <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
    <!-- JQUERY-->
    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-
+  <!-- Animate.css -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
 </head>
 
 <body>
-  <nav class=" navbody navbar navbar-expand-lg navbar-dark sticky-top">
+  <!-- Navbar start -->
+  <nav class="navbody navbar navbar-expand-md navbar-dark sticky-top">
      <div class="container">
         <a class="navbar-brand" href="index.html">
           <img src="pics/logo.png" width="70" height="70" style="transform: rotate(-15deg)" alt="SA">
@@ -40,31 +43,14 @@
        </div>
      </div>
   </nav>
+<!-- Navbar end -->
 
-  <header class=Main>
-    <nav class=" navhead navbar navbar-expand-lg navbar-dark sticky-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="pics/logo.png" width="70" height="70" style="transform: rotate(-15deg)" alt="SA">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#buttons"
-          aria-controls="buttons" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="buttons">
-          <div class="navbar-nav nav ml-auto">
-            <a class="nav-item nav-link active" style="font-weight: bold"  href="index.html">About</a>
-            <a class="nav-item nav-link" style="font-weight: bold" href="projects.html">Projects</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <article class=Me>
-      <img class=picture src="pics/Sydney3.0.png" alt="Sydney Anderson Profile Pic">
-      <h1>Hi, I'm Sydney</h1>
-      <p>A CompSci student trying to learn Web Development.</p>
-    </article>
+  <header class="Main">
+  <article class="Me container">
+    <h1 class="animate__animated animate__backInLeft animate__slow">Hi, I'm Sydney</h1>
+    <img class="picture animate__animated animate__fadeIn animate__delay-1s" src="pics/Sydney3.0.png" alt="Sydney Anderson Profile Pic">
+    <p class="animate__animated animate__fadeIn animate__delay-1s"> I like to think I'm creative sometimes</p>
+  </article>
   </header>
 
   <main data-aos="fade-up" class="AboutMe container">
@@ -74,9 +60,10 @@
     <article>
       <h1>About Me</h1>
       <h3>My name is Sydney Anderson and I'm from Aurora, IL.</h3>
-      <p> I'm a student who loves to try and learn new things involving computers.
+      <p> I'm a CompSci student who loves to try and learn new things.
       </p>
-      <p>Also, I'm a triplet! (So, there are 2 more of me)</p>
+      <p>I'm a triplet! (So, there are 2 more of me)</p>
+      <p>I'm a D1 High Jumper!!!</p>
     </article>
   </main>
 
@@ -94,13 +81,8 @@
           <h3>Louisiana Tech University</h3>
         </li>
         <h4>Ruston, LA</h4>
-        <p>&#9753 Bachelors in Computer Science, Junior</p>
-        <p>&#9753 Concentrations in Cyber Security and Big Cloud Data and Computing.</p>
-        <li>
-          <h3>Yorkville High School</h3>
-        </li>
-        <h4>Yorkville, IL</h4>
-        <p>&#9753 High School Diploma May '17</p>
+        <p>&#9753 Bachelors in Computer Science, Expected May 2021</p>
+        <p>&#9753 Concentrations in Cyber Security and Big Data Cloud & Computing.</p>
       </ul>
     </article>
   </section>
@@ -115,23 +97,27 @@
       <h1>Work Experience</h1>
       <ul>
         <li>
-          <h3>5 Dynamics </h3>
-          <h4 class=date>June 2019 - Present</h4>
+          <h3 style="display: inline;">BlackRock, <p style="display: inline; font-weight: normal;"> <i>San Francisco, CA </i> </p></h3>
+          <h4 class=date>July 2020 - Present</h4>
         </li>
-        <h4>Austin, TX</h4>
-        <p> &#9753 Agile Developement
+        <h4>APG Software Engineer Analyst</h4>
+        <p> &#9753	TBD...
         </p>
-        <p> &#9753 Quality Assurance of Software
-        </p>
+
         <li>
-          <h3>Louisiana Tech Office of Financial Aid</h3>
-          <h4 class=date>2017-2021</h4>
+          <h3 style="display: inline;">5 Dynamics, <p style="display: inline; font-weight: normal;"> <i>Austin, TX </i> </p></h3>
+          <h4 class=date>June 2019 - July 2020</h4>
         </li>
-        <h4>Ruston, LA</h4>
-        <p> &#9753 In-depth knowledge about Federal and private loans, grants, and scholarships
+        <h4>Quality Assurance Analyst</h4>
+        <p> &#9753	Created unit tests using Jest and Enzyme to render and test React & Redux components, helping the company increase its frontend code coverage from 14% to 30% which reduced the chances of undetected bugs.
         </p>
-        <p> &#9753 Aided those inquiring about assistance covering costs incurred in the pursuit of post-secondary
-          education.
+
+        <li>
+          <h3 style="display: inline;">Fenway Group, <p style="display: inline; font-weight: normal;"> <i>Ruston, LA </i> </p></h3>
+          <h4 class=date>October 2019 - May 2019</h4>
+        </li>
+        <h4>Associate Consultant</h4>
+        <p> &#9753	Designed lighting web components and modified Apex pages to assist in the migration of CenturyLink’s small business platform from Salesforce Classic to Lightning providing a smoother workflow and intuitive interface. 
         </p>
       </ul>
     </article>
@@ -168,9 +154,7 @@
 
   <section class=" chat container">
     <h1>Let's Chat!</h1>
-    <p>I love talking to people!</p>
-    <p>Feel free to send me some feedback, advice, or simply say <em>"Hi"</em> !<br>
-      It would be great to hear from you or a team member, so that I can continue to grow as a student.</p>
+    <p>Feel free to send me some feedback, advice, or simply say <em>"Hi"</em> !</p>
     <!-- <h3>Psst, click the button below</h3> -->
 
     <form method="post" action="mailto:sta019@latech.edu" enctype="text/plain">
@@ -210,7 +194,7 @@
       //disable: window.innerWidth < 768
     });
   </script>
-   <script src="animates.js"></script>
+   <!-- <script src="animates.js"></script> -->
 </body>
 
 </html>

@@ -1,8 +1,9 @@
-let navhead = document.querySelector(".navhead"); //should grab first navbar class.. which is what we need
-let navbody = document.querySelector(".navbody");
-let heading = document.querySelector(".Main");
+// let navhead = document.querySelector(".navhead"); //should grab first navbar class.. which is what we need
+// let navbody = document.querySelector(".navbody");
+// let heading = document.querySelector(".Main");
 
-window.onscroll = animateNav;
+
+// window.onscroll = animateIntro;
 
 function animateNav(e) {
     //get heading height
@@ -23,11 +24,13 @@ function animateNav(e) {
 
         }
 
-        // $(".navbar").slideUp(1000);
-
-        //console.log(heading.offsetHeight);
-
+    });
+}
+    // Shorthand for $( document ).ready()
+    $(function() {
+        console.log( "ready!" );
+        $("#myName").fadeIn(2000);
+        $("#introPic").fadeIn(2000);
+        // $(".navbody").slideUp(1000); //.slideDown(1000);
 
     });
-
-}

@@ -1,5 +1,11 @@
 * {
   margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
 }
 
 body {
@@ -7,7 +13,7 @@ body {
 }
 
 body h1 {
-  font-family: 'Courgette', cursive;
+  font-family: 'Piedra', cursive;
   color: #642485;
   font-size: 30px;
 }
@@ -30,7 +36,7 @@ body li,
 body ul,
 body h3,
 body h4 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .picture {
@@ -53,12 +59,11 @@ hr {
 body .navbody {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  background-color: #231F20;
-  display: none;
+  background-color: #251d2c;
 }
 
-.navhead {
-  margin-bottom: 1.5rem;
+body .navbody .nav-link {
+  margin-left: 2rem;
 }
 
 header {
@@ -67,28 +72,36 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height: 500px;
+  height: 450px;
 }
 
-.Me {
+header .Me {
+  padding: 1.2rem;
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/opacity/see-through */
+  width: 80% !important;
+  height: 60%;
+  position: absolute;
+  outline: solid black;
   text-align: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  margin-top: 2.5rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
-.Me h1 {
-  margin-bottom: 20px;
+header .Me h1, header .Me p {
   position: relative;
-  color: black;
+  color: white;
+  font-family: 'Piedra', cursive;
+  margin-top: 1.5rem;
 }
 
-.Me p {
-  font-family: 'Courgette', cursive;
-  position: relative;
-  color: black;
-  -webkit-text-decoration: underline overline white wavy;
-          text-decoration: underline overline white wavy;
+header .Me h1 {
+  font-size: 60px;
 }
 
 .AboutMe {
@@ -169,7 +182,7 @@ header {
 
 .chat {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 8rem;
 }
 
 .chat h1 {
@@ -178,24 +191,17 @@ header {
 }
 
 .chat p:nth-child(2) {
-  font-family: 'Courgette', cursive;
-  font-size: 16px;
-}
-
-.chat p:nth-child(3) {
-  margin-top: 2rem;
-  max-width: 570px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .chat input[type="submit"] {
-  margin: 3rem 1rem;
+  margin: 1rem 1rem 3rem;
   font-family: 'Poppins', sans-serif;
   background-color: #a481c6;
-  padding: 10px 25px;
+  padding: 1.5rem 2rem;
   border: 1px solid black;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .chat input[type="submit"]:hover {
@@ -232,26 +238,86 @@ body footer a {
   color: white;
 }
 
-.tempProj {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2fr 1fr 1fr 2fr;
-      grid-template-columns: 2fr 1fr 1fr 2fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  grid-template: ". pic text .";
-  grid-column-gap: 3rem;
-  margin-top: 6rem;
-  margin-bottom: 3rem;
+.Projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3rem 0rem;
 }
 
-.tempProj img {
-  grid-area: pic;
+.Projects .projectCard {
+  margin: .5em;
+  overflow: hidden;
+  cursor: pointer;
+  min-height: 12rem;
+  min-width: 19rem;
 }
 
-.tempProj .projText {
-  grid-area: text;
-  color: white;
+.Projects .projectCard .child {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  /* fallback color */
+  background-image: url("purple3.0.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.Projects .projectCard .bootStrap {
+  background-image: url("boostrapSite.PNG");
+}
+
+.Projects .projectCard .javas {
+  background-image: url("javascriptSite.PNG");
+}
+
+.Projects .projectCard .child:before {
+  content: "";
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(52, 73, 94, 0.75);
+}
+
+.Projects .projectCard:hover .child, .Projects .projectCard:focus .child {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.Projects .projectCard:hover .child:before, .Projects .projectCard:focus .child:before {
+  display: block;
+}
+
+.Projects .projectCard:hover span, .Projects .projectCard:focus span {
+  display: block;
+}
+
+.Projects span {
+  display: none;
+  font-size: 24px;
+  color: #ffffff !important;
+  font-family: 'Piedra', cursive;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 50px;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 550px) {
@@ -259,18 +325,21 @@ body footer a {
     width: 130px;
     height: 130px;
   }
+  .Projects .projectCard {
+    min-height: 14rem;
+    min-width: 25rem;
+  }
   header {
     height: 550px;
   }
-  header .navhead {
-    margin-left: 5rem;
-    margin-right: 5rem;
-  }
-  header .navhead .nav-item {
-    margin-left: 2rem;
-  }
   header article p {
     font-size: 17px;
+  }
+  .Me h1 {
+    font-size: 50px;
+  }
+  .Me p {
+    font-size: 30px;
   }
   body h1 {
     font-size: 32px;
@@ -300,14 +369,6 @@ body footer a {
     grid-area: date;
     text-align: right;
   }
-}
-
-.navhead .nav-item {
-  margin-left: 2rem;
-}
-
-.nav-link {
-  margin-left: 2rem;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1800px) {
