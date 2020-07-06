@@ -8,45 +8,92 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My Projects</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sydney's Personal Blog</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Piedra&family=Poppins&display=swap" rel="stylesheet">
+    <!--BootStrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:500&display=swap" rel="stylesheet">
-</head>
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Animate on Scroll-->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <!-- JQUERY-->
+     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+  </head>
 
-<body style="background-color: black !important">
-    <nav class=" navhead navbar navbar-expand-lg navbar-dark sticky-top">
+<body>
+    <!-- Navbar start -->
+    <nav class="navbody navbar navbar-expand-md navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="/pics/logo.png" width="70" height="70" style="transform: rotate(-15deg)"
-                    alt="Profile Picture">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#buttons"
-                aria-controls="buttons" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+           <a class="navbar-brand" href="index.html">
+             <img src="pics/logo.png" width="70" height="70" style="transform: rotate(-15deg)" alt="SA">
+           </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#buttons"
+            aria-controls="buttons" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-            <div class="collapse navbar-collapse" id="buttons">
-                <div class="navbar-nav nav ml-auto">
-                    <a class="nav-item nav-link" style="font-weight: bold" href="index.html">About</a>
-                    <a class="nav-item nav-link active" style="font-weight: bold" href="projects.html">Projects</a>
-                </div>
+          <div class="collapse navbar-collapse" id="buttons">
+            <div class="navbar-nav nav ml-auto">
+              <a class="nav-item nav-link" style="font-weight: bold" href="index.html">About</a>
+              <a class="nav-item nav-link active" style="font-weight: bold" href="projects.html">Projects</a>
             </div>
+          </div>
         </div>
-    </nav>
-    <section class=" container tempProj">
-        <img src="pics/float.gif" alt="gif" width=400px height=400px>
-        <div class=" container projText">
-            <h1>Wow... so empty</h1>
-            <h2>Sorry, but it looks like I am currently working to make this page more presentable. Please check back
-                later to see this page once I finish it!
-            </h2>
-        </div>
+     </nav>
+<!-- Navbar end -->
+
+    <section class=" Projects">
+
+        <div class="card text-white bg-dark projectCard" onclick="bootstrapSite()">
+            <!-- <div class="card-header">Learning Bootstrap</div> -->
+            <div class="card-body child bootStrap">
+              <span>Learning Bootstrap</span>
+            </div>
+          </div>
+
+          <div class="card text-white bg-dark projectCard" onclick="javascriptsite()">
+            <!-- <div class="card-header">Learning Bootstrap</div> -->
+            <div class="card-body child javas">
+              <span>Learning Javascript</span>
+            </div>
+          </div>
+
+          <div class="card text-white bg-dark projectCard" onclick="">
+            <!-- <div class="card-header">Learning Bootstrap</div> -->
+            <div class="card-body child">
+              <span>TBD</span>
+            </div>
+          </div>
+
+          <div class="card text-white bg-dark projectCard" onclick="">
+            <!-- <div class="card-header">Learning Bootstrap</div> -->
+            <div class="card-body child">
+              <span>TBD</span>
+            </div>
+          </div>
+
+          <div class="card text-white bg-dark projectCard" onclick="">
+            <!-- <div class="card-header">Learning Bootstrap</div> -->
+            <div class="card-body child">
+              <span>TBD</span>
+            </div>
+          </div>
+
+          <div class="card text-white bg-dark projectCard" onclick="">
+            <!-- <div class="card-header">Learning Bootstrap</div> -->
+            <div class="card-body child">
+              <span>TBD</span>
+            </div>
+          </div>
+
     </section>
 
     <footer class=" text-center">
@@ -70,6 +117,17 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <script src="" async defer></script>
+    <script>
+      function bootstrapSite() {
+        console.log('Opening Bootstrap Site');
+        window.open('Learning Bootstrap - site/index.html');
+      }
+      function javascriptsite() {
+        console.log('Opening Javascript Site');
+        window.open('Learning JavaScript - site/index.html');
+      }
+
+      </script>
 </body>
 
 </html>
